@@ -5,6 +5,7 @@
         public static void Main(string[] args)
         {
             Ledger ledger = FileReader.CreateLedger("./Transactions2014.txt");
+            Console.WriteLine(ledger.GetAccounts());
         }
     }
 }
