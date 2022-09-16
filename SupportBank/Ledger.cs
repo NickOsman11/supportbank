@@ -13,17 +13,11 @@ namespace SupportBank
 
         private List<Account> GetAccounts()
         {
-            List<string> nameList = new List<string>();
+            HashSet<string> nameList = new HashSet<string>();
             foreach (Transaction transaction in TransactionsToDate)
             {
-                if (!nameList.Contains(transaction.Lender))
-                {
-                    nameList.Add(transaction.Lender);
-                }
-                if (!nameList.Contains(transaction.Borrower))
-                {
-                    nameList.Add(transaction.Borrower);
-                }
+                nameList.Add(transaction.Lender);
+                nameList.Add(transaction.Borrower);
             }
             List<Account> accounts = new List<Account>();
             foreach (string name in nameList)
