@@ -37,7 +37,6 @@ namespace SupportBank
         {
             decimal borrowed = 0M;
             decimal lent = 0M;
-
             foreach (Transaction transaction in TransactionsToDate)
             {
                 if (transaction.Lender == account.Name)
@@ -51,6 +50,5 @@ namespace SupportBank
             }
             return lent - borrowed;
         }
-
     }
 }

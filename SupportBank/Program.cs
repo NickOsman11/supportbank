@@ -4,7 +4,7 @@
     {
         public static void Main(string[] args)
         {
-            Console.WriteLine("hi mum");
+            Ledger ledger = FileReader.CreateLedger("./Transactions2014.txt");
         }
     }
 }
